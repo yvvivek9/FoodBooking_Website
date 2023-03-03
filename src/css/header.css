@@ -1,0 +1,77 @@
+.header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: red;
+    height: 100px;
+    display: flex;
+}
+
+@import "https://fonts.googleapis.com/css?family=Rancho";
+
+.header-title{
+    position: relative;
+    flex: 30%;
+    font-family: "Rancho";
+    font-weight: 800;
+    color: white;
+    font-size: 70px;
+    padding-left: 50px;
+}
+
+.header-menu{
+    position: relative;
+    flex: 40%;
+    padding-top: 30px;
+}
+
+.header-cart{
+    position: relative;
+    flex: 10%;
+    padding-top: 15px;
+}
+
+.shopping-cart{
+    position: relative;
+    margin-left: 5px;
+    height: 50px;
+    width: auto;
+}
+
+.header-user-name{
+    position: relative;
+    flex: 15%;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header-logout{
+    position: relative;
+    flex: 5%;
+    padding-top: 25px;
+}
+
+.logout-button{
+    position: relative;
+    margin-left: 5px;
+    height: 50px;
+    width: auto;
+}
+
+.menu-button{
+    padding: 10px;
+    background-color: rgb(235, 27, 27);
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.menu-button-arrow{
+    display: none;
+}
+
+.menu-button:hover{
+    background-color: rgb(202, 24, 24);
+}
