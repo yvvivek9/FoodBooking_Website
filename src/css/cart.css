@@ -1,0 +1,32 @@
+.cart{
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(226, 226, 226);
+    min-height: 100%;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
+.your-order{
+    position: relative;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.cart-content{
+    position: relative;
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    background-color: rgb(205, 215, 224);
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.cart-food-img{
+    height: 100px;
+    width: 100px;
+}

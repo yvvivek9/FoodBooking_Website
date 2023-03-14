@@ -4,6 +4,7 @@ import './App.css';
 import Header from "./components/header"
 import Menu from "./components/menu"
 import MenuFilter from "./components/menu-filter"
+import Cart from "./components/cart"
 
 const mongodb = [
   {Name: 'Dosa', Quantity: 0, Cost: 40, Type: 'Breakfast', BufferQ: 8, CurrOrders: 23, PrepTime: 3},
@@ -54,9 +55,8 @@ function App() {
       <Routes>
         <Route exact index path='/' element={<Menu menu={menu} addItem={addItem} remItem={remItem} />} ></Route>
         <Route exact path='/filter' element={<MenuFilter menu={menu} filter={filter} addItem={addItem} remItem={remItem} />} ></Route>
+        <Route exact path='/cart' element={<Cart menu={menu} cartCount={cartCount} addItem={addItem} remItem={remItem} />} ></Route>
       </Routes>
-      {/* {filter === "Everything" ? <Menu menu={menu} addItem={addItem} remItem={remItem} />
-       : <MenuFilter menu={menu} filter={filter} addItem={addItem} remItem={remItem} />} */}
     </BrowserRouter>
   );
 }

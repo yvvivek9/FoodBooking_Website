@@ -4,7 +4,7 @@ import "../css/header.css"
 import ShoppingCart from "../web_images/shopping_cart.svg"
 import LogoutButton from "../web_images/logout.svg"
 import HeaderMenu from "./header-menu"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Header({cartCount, user, setFilter}) {
     const [visible, setVisible] = useState(false)
@@ -34,8 +34,10 @@ export default function Header({cartCount, user, setFilter}) {
             <div className='header-menu'><span className='menu-button' onClick={() => menuFunction()}>Menu&nbsp;&nbsp;&nabla;</span></div>
             <HeaderMenu visible={visible} settFilter={settFilter} menu={menu} />
             <div className='header-cart'>
-                <img src={ShoppingCart}  className='shopping-cart' alt='Error' />
-                <span>{cartCount} Items</span>
+                <Link to='/cart'>
+                    <img src={ShoppingCart}  className='shopping-cart' alt='Error' />
+                    <span>{cartCount} Items</span>
+                </Link>
             </div>
             <div className='header-user-name'>
                 <span>Welcome,<br /></span>
