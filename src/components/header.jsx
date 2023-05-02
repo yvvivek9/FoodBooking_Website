@@ -8,7 +8,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 export default function Header({cartCount, user, setFilter}) {
     const [visible, setVisible] = useState(false)
-    const menu = ['Everything', 'Breakfast', 'Lunch', 'Snacks', 'Bakery', 'Beverages']
+    const foodType = ['Everything', 'Breakfast', 'Lunch', 'Snacks', 'Bakery', 'Beverages']
     const navigate = useNavigate();
 
     const menuFunction = () => {
@@ -26,13 +26,14 @@ export default function Header({cartCount, user, setFilter}) {
             navigate('/')
         else    
             navigate('/filter')
+        setVisible(false)
     }
 
     return(
         <div className='header'>
             <div className='header-title'>Food Court</div>
             <div className='header-menu'><span className='menu-button' onClick={() => menuFunction()}>Menu&nbsp;&nbsp;&nabla;</span></div>
-            <HeaderMenu visible={visible} settFilter={settFilter} menu={menu} />
+            <HeaderMenu visible={visible} settFilter={settFilter} foodType={foodType} />
             <div className='header-cart'>
                 <Link to='/cart'>
                     <img src={ShoppingCart}  className='shopping-cart' alt='Error' />
